@@ -40,10 +40,6 @@ public class StudentDAO {
                 addStudent(tokens[0], tokens[1], tokens[2]);
                 line = reader.readLine();
             }
-
-            for(Student student: students){
-                System.out.println(student);
-            }
             reader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -54,7 +50,6 @@ public class StudentDAO {
 
     private static void addStudent(String name, String avrMark, String blockChain){
         Student stud = new Student();
-
         stud.setName(name);
         stud.setAvrMark(Float.parseFloat(avrMark));
         stud.setBlockChain(Boolean.valueOf(blockChain));

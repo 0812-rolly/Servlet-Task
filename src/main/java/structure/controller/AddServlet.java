@@ -25,18 +25,20 @@ public class AddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
         String averageMark = req.getParameter("averageMark");
-        String knowsBlockchain = req.getParameter("knowsBlockchain");
+        String blockchain = req.getParameter("blockchain");
+        addStudent(name, averageMark, blockchain);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/add.jsp");
+        dispatcher.forward(req, resp);
+    }
 
+    private void addStudent(String name, String averageMark, String blockchain) {
         Student student = new Student();
         student.setName(name);
         student.setAvrMark(Float.parseFloat(averageMark));
-        if (knowsBlockchain != null)
+        if (blockchain != null)
             student.setBlockChain(true);
         else
             student.setBlockChain(false);
         StudentDAO.addStudent(student);
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/add.jsp");
-        dispatcher.forward(req, resp);
     }
 }

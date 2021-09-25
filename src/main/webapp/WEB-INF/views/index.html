@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My super project!</title>
+    <title>Servlet task</title>
 </head>
 <body>
-<!-- header -->
 <div>
     <h1>Web app!</h1>
 </div>
 
-<div>       <!-- content -->
+<div>
     <div>
-        <button onclick="location.href='/list.jsp'">List users</button>
-        <button onclick="location.href='/add.jsp'">Add user</button>
+        <form action="add-servlet" method="get">
+            <button type="submit" name="addStudent" value="Add new student">Add new student</button>
+        </form>
+        <form action="list-servlet" method="get">
+            <button type="submit" name="studentsList" value="List of students">List of students</button>
+        </form>
     </div>
 </div>
 </body>

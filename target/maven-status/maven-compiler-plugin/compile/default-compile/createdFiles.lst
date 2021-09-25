@@ -1,4 +1,5 @@
 structure/controller/ListServlet.class
 structure/controller/AddServlet.class
+structure/controller/MainPageServlet.class
 structure/model/Student.class
 structure/DAO/StudentDAO.class

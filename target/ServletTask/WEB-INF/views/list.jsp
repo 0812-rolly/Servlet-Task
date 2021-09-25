@@ -1,5 +1,5 @@
 <html>
-    <title>List of students</title>
+    <title>Students lis</title>
     <body>
     </body>
 </html>
