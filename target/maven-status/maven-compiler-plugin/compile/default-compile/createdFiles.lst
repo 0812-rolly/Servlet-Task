@@ -1,5 +1,7 @@
-structure/controller/ListServlet.class
+structure/controller/FilterPageServlet.class
 structure/controller/AddServlet.class
-structure/controller/MainPageServlet.class
+structure/controller/ValidationFilter.class
 structure/model/Student.class
 structure/DAO/StudentDAO.class
+structure/controller/ListServlet.class
+structure/controller/MainPageServlet.class

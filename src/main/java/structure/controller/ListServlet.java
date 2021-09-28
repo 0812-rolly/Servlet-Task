@@ -15,7 +15,6 @@ public class ListServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        log("init");
         StudentDAO.loadData();
     }
 
@@ -28,14 +27,25 @@ public class ListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
-
+        String blockchainFilter = req.getParameter("blockchainFilter");
+        String averageMarkFilter = req.getParameter("averageMarkFilter");
         List<Student> studentList;
-        studentList = StudentDAO.getStudents();
+
+        if (averageMarkFilter != null && blockchainFilter != null)
+            studentList = StudentDAO.getExelStudentsWithBlockchain();
+        else if (averageMarkFilter != null)
+            studentList = StudentDAO.getExcellentStudents();
+        else if (blockchainFilter != null)
+            studentList = StudentDAO.getStudentsBlockchain();
+        else
+            studentList = StudentDAO.getStudents();
 
         out.write("<div align=\"center\">");
         for (Student s: studentList){
             out.write(s.toString() + "<br/>");
         }
+        out.write("<br/>");
+        out.write("<a href=\"main-servlet\">Come back</a>");
         out.write("</div>");
     }
 }

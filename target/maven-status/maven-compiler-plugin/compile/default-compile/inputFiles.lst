@@ -1,5 +1,7 @@
+/Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/controller/FilterPageServlet.java
 /Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/DAO/StudentDAO.java
 /Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/controller/MainPageServlet.java
+/Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/controller/ValidationFilter.java
 /Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/model/Student.java
 /Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/controller/ListServlet.java
 /Users/yanabelozub/IdeaProjects/ServletTask/src/main/java/structure/controller/AddServlet.java

@@ -30,6 +30,23 @@ public class StudentDAO {
                 .collect(Collectors.toList());
     }
 
+    public static List<Student> getExelStudentsWithBlockchain(){
+        return students.stream()
+                .filter(x -> x.getAvrMark() >= 4 && x.isBlockChain())
+                .collect(Collectors.toList());
+    }
+
+    public static Student getStudent(String name){
+        List<Student> studentList = students.stream()
+                .filter(x -> x.getName().equals(name))
+                .collect(Collectors.toList());
+        if (studentList.size() != 0){
+            return studentList.get(0);
+        }
+        else
+            return new Student("", -1, true);
+    }
+
     public static void loadData() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/students.txt"));

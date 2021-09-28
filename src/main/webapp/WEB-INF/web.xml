@@ -26,6 +26,25 @@
         <servlet-name>list-servlet</servlet-name>
         <url-pattern>/list-servlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>filter-servlet</servlet-name>
+        <servlet-class>structure.controller.FilterPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filter-servlet</servlet-name>
+        <url-pattern>/filter-servlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>validation-filter</filter-name>
+        <filter-class>structure.controller.ValidationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>validation-filter</filter-name>
+        <url-pattern>/add-servlet</url-pattern>
+    </filter-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
