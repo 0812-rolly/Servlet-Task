@@ -20,7 +20,7 @@ public class ValidationFilter implements Filter {
 
         String errorMessage;
 
-        if (name.equals("") || averageMark.equals("")){
+        if ("".equals(name) || averageMark.equals("")){
             errorMessage = "Some fields are empty.";
 
             servletRequest.setAttribute("errorMessage", errorMessage);

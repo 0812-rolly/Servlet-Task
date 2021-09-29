@@ -39,13 +39,32 @@ public class ListServlet extends HttpServlet {
             studentList = StudentDAO.getStudentsBlockchain();
         else
             studentList = StudentDAO.getStudents();
-
-        out.write("<div align=\"center\">");
-        for (Student s: studentList){
-            out.write(s.toString() + "<br/>");
-        }
-        out.write("<br/>");
-        out.write("<a href=\"main-servlet\">Come back</a>");
-        out.write("</div>");
+            out.write("<br>");
+            out.write("<br>");
+            out.write("<h2 align=\"center\">List of students</h2>");
+            out.write("<br>");
+            out.write("<div align=\"center\">");
+            out.write("<table cellpadding='10' bordercolor='black' border='2'>");
+                out.write("<thead>");
+                    out.write("<tr>");
+                        out.write("<th>Имя</th>");
+                        out.write("<th>Средняя оценка</th>");
+                        out.write("<th>Blockchain</th>");
+                    out.write("</tr>");
+                out.write("</thead>");
+                out.write("<tbody>");
+            for (Student s: studentList) {
+                out.write("<tr>");
+                    out.write("<td align='center'>" + s.getName() + "</td>");
+                    out.write("<td align='center'>" + s.getAvrMark() + "</td>");
+                    out.write("<td align='center'>" + s.isBlockChain() + "</td>");
+                out.write("</tr>");
+            }
+                out.write("</tbody>");
+            out.write("</table>");
+            out.write("<br>");
+            out.write("<br>");
+            out.write("<a href=\"main-servlet\">Come back</a>");
+            out.write("</div>");
     }
 }

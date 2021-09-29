@@ -6,6 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Error</title>
 </head>
-<h2>Error: "${errorMessage}"</h2>
+<div align="center">
+    <br>
+    <br>
+    <h2>Error: "${errorMessage}"</h2>
+    <br>
+    <a href="add-servlet">Come back</a>
+</div>
 </body>
 </html>

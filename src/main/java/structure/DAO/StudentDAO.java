@@ -20,7 +20,7 @@ public class StudentDAO {
 
     public static List<Student> getStudentsBlockchain(){
         return students.stream()
-                .filter(x -> x.isBlockChain())
+                .filter(Student::isBlockChain)
                 .collect(Collectors.toList());
     }
 

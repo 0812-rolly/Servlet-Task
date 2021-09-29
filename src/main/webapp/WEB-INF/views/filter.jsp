@@ -4,7 +4,9 @@
     <title>Filtering the list</title>
 </head>
 <body>
+<div align="center">
 <form action="list-servlet" method="get">
+    <br>
     <br>
     <div>
         <label for="blockchain">Filter by blockchain value</label>
@@ -18,5 +20,6 @@
 <br>
     <input type="submit" value="View student list" />
 </form>
+</div>
 </body>
 </html>
